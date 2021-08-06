@@ -1,1 +1,1 @@
-- 👋 Hi, I’m @nicholasbergesen
+👋 Hi, I’m @nicholasbergesen
