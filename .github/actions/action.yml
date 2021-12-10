@@ -2,7 +2,7 @@ name: "Greetings"
 author: "@nicholasbergesen"
 description: "I greet you"
 inputs:
-  my-name: #name of the person I'll greet
+  my-name:
     description: "Name of the person I'll greet."
     required: true
 outputs:

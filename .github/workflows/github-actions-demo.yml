@@ -15,8 +15,15 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - name: Greeting
-        uses: ./.github/actions/action.yml
+  Say-Hello:
+    runs-on: ubuntu-latest
+      steps:
+        name: "Checkout repo code"
+        uses: actions/Checkout@v2
+        name: "Greet me"
+        uses: ./github/actions/action.yml
         with:
-          my-name: 'Nick'
+          my-name: "Nick"
+
+
 
