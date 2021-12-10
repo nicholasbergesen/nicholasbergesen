@@ -18,10 +18,7 @@ jobs:
   Say-Hello:
     runs-on: ubuntu-latest
     steps:
-        - uses: actions/checkout@v2
-        - uses: ./.github/actions/action.yml
-          with:
-            my-name: "Nick"
-
-
-
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/action.yml
+        with:
+          my-name: "Nick"
