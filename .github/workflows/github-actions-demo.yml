@@ -16,7 +16,6 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Greeting
-        uses: actions/checkout
         uses: ./.github/actions/action.yml
         with:
           my-name: 'Nick'
