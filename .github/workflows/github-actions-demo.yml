@@ -15,8 +15,8 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - name: OWASP ZAP Full Scan
-        uses: zaproxy/action-full-scan@v0.3.0
+      - name: Greeting
+        uses: ./github/actions/action.yml
         with:
-          target: 'https://nicholasbergesen.github.io/nicholasbergesen/'
+          my-name: 'Nick'
 
