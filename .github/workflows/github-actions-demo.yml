@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - uses: actions/Checkout@v2
-        - uses: ./.github/actions/action.yml
+        - uses: .github/actions/action.yml
           with:
             my-name: "Nick"
 
