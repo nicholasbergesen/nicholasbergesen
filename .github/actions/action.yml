@@ -6,5 +6,5 @@ inputs:
     description: "Name of the person I'll greet."
     required: true
 outputs:
-  greeting: echo Greetings ${{ my-name }}!
+  greeting: echo Greetings $INPUT_MY-NAME!
   description: "Your greeting"
