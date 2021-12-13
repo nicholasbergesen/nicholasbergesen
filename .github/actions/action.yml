@@ -5,6 +5,4 @@ inputs:
   my-name:
     description: "Name of the person I'll greet."
     required: true
-outputs:
-  greeting: echo Greetings $INPUT_MY-NAME !
-  description: "Your greeting"
+run: echo Greetings $INPUT_MY-NAME
