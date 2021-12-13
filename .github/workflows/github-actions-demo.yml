@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/action.yml@main
+      - name: Run local Greeting
+        uses: ./github/actions/action.yml
         with:
           my-name: "Nick"
