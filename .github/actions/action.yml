@@ -10,3 +10,4 @@ runs:
   steps:
     - id: hello
       run: echo Greetings $INPUT_MY-NAME
+      shell: bash
