@@ -8,6 +8,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - id: hello
-      run: echo Greetings ${{ my-name }}
+      run: echo $INPUT_MY-NAME
       shell: bash
