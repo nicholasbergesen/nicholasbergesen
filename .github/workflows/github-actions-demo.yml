@@ -23,3 +23,11 @@ jobs:
         uses: ./.github/actions/
         with:
           my-name: "Nick"
+  Show-Temperature:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@2
+      - name: Get temperature
+        uses: ./github/actions/temperature
+        with:
+          api_key: ${{ WEATHER_API_KEY }}
