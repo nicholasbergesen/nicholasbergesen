@@ -20,6 +20,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run local Greeting
-        uses: ./.github/actions/action.yml
+        uses: ./.github/actions/action
         with:
           my-name: "Nick"
