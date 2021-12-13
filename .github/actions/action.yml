@@ -4,5 +4,9 @@ description: "I greet you"
 inputs:
   my-name:
     description: "Name of the person I'll greet."
-    required: true
-run: echo Greetings $INPUT_MY-NAME
+    required: true  
+runs:
+  using: "composite"
+  steps:
+    - id: hello
+      run: echo Greetings $INPUT_MY-NAME
