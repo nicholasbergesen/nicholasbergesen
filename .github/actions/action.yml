@@ -9,5 +9,5 @@ runs:
   using: "composite"
   steps:
     - id: hello
-      run: echo Greetings ${{ INPUT_MY-NAME }}
+      run: echo Greetings ${{ my-name }}
       shell: bash
