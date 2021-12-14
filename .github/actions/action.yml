@@ -1,12 +1,16 @@
-name: "Greetings"
+name: "Temperature"
 author: "@nicholasbergesen"
-description: "I greet you"
+description: "The Temperature"
 inputs:
-  my-name:
-    description: "Name of the person I'll greet."
-    required: true  
+  city:
+    description: "Where do you want to check the temperature"
+    required: true 
+  API_KEY:
+    description: "Weather API key
+    retquired: true 
+outputs:
+  temperature:
+    description: "The temperature in C"
 runs:
-  using: "composite"
-  steps:
-      run: echo $INPUT_MY-NAME
-      shell: bash
+  using: "node12"
+  main: "main.js"
