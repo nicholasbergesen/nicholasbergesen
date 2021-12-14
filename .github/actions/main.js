@@ -1,7 +1,7 @@
 'use strict'
 
 const core = require('@actions/core');
-const fetch = requre("node-fetch");
+const fetch = require("node-fetch");
 
 const main = () => {
     try {
