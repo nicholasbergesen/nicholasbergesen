@@ -7,13 +7,9 @@ const main = async () => {
     try {
         const city = core.getInput('city', { required: true });
         const key = core.getInput('API_KEY', { required: true });
-        
-        console.log(`The city is ${city} and secret is ${key}`);
 
         const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${key}&q=${city}&aqi=no`)
-        console.log(response);
         const json = await response.json();
-        console.log(json);
         const temp_c = json.current.temp_c;
 
         console.log(`The temperature is ${temp_c}°C`);
