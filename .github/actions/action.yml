@@ -12,5 +12,5 @@ outputs:
   temperature:
     description: "The temperature in C"
 runs:
-  using: "node14"
+  using: "node16"
   main: "main.js"
