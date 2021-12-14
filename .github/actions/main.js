@@ -1,7 +1,7 @@
 'use strict'
 
 const core = require('@actions/core');
-const fetch = fetch('node-fetch');
+const fetch = require('node-fetch');
 
 (async function run() {
     try {
