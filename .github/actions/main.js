@@ -21,4 +21,4 @@ const fetch = fetch('node-fetch');
     }
 })();
 
-await run();
+run();
