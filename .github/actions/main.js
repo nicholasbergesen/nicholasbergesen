@@ -1,7 +1,7 @@
 'use strict'
 
-const core = require('@actions/core');
-const fetch = require('node-fetch');
+import core from '@actions/core';
+import fetch from "node-fetch";
 
 try {
     const city = core.getInput('city', { required: true });
