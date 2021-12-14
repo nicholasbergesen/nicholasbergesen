@@ -1,8 +1,9 @@
 'use strict'
-export function main() {
-    import core from '@actions/core';
-    import fetch from "node-fetch";
 
+import core from '@actions/core';
+import fetch from "node-fetch";
+
+const main = () => {
     try {
         const city = core.getInput('city', { required: true });
         const key = core.getInput('API_KEY', { required: true });
@@ -20,3 +21,5 @@ export function main() {
         core.setFailed(`Action failed with error ${err}`);
     }
 }
+
+export default main;
