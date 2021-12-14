@@ -1,7 +1,7 @@
 'use strict'
 
 const core = require('@actions/core');
-import fetch from "node-fetch";
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 const main = () => {
     try {
