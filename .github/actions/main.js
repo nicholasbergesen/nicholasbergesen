@@ -1,9 +1,7 @@
-'use strict'
-
-const core = require('@actions/core');
-const fetch = require('node-fetch');
-
 (async function run() {
+    const core = require('@actions/core');
+    const fetch = require('node-fetch');
+
     try {
         const city = core.getInput('city', { required: true });
         const key = core.getInput('API_KEY', { required: true });
@@ -21,4 +19,6 @@ const fetch = require('node-fetch');
     }
 })();
 
-run();
+export default run;
+
+await run();
