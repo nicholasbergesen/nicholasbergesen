@@ -9,10 +9,10 @@ try {
     
     console.log(`The city is ${city} and secret is ${key}`);
 
-    let tempC = await fetch(`https://api.weatherapi.com/v1/current.json?key=${key}&q=${city}&aqi=no`)
+    let tempC = fetch(`https://api.weatherapi.com/v1/current.json?key=${key}&q=${city}&aqi=no`)
         .then(res => res.json())
         .then(json => json.current.temp_c);
-        
+
     console.log(`The temperature is ${tempC}°C`);
 }
 catch (err) {
