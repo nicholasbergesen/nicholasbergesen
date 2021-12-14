@@ -6,8 +6,8 @@ inputs:
     description: "Where do you want to check the temperature"
     required: true 
   API_KEY:
-    description: "Weather API key
-    retquired: true 
+    description: "Weather API key"
+    required: true
 outputs:
   temperature:
     description: "The temperature in C"

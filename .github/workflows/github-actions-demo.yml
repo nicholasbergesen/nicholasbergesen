@@ -8,3 +8,4 @@ jobs:
       - uses: ./.github/actions/
         with:
           city: "Seoul"
+          API_KEY: ${{ secrets.WEATHER_API_KEY }}
