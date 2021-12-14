@@ -1,9 +1,7 @@
 'use strict'
-
-const test = () => {
+export function main() {
     import core from '@actions/core';
     import fetch from "node-fetch";
-
 
     try {
         const city = core.getInput('city', { required: true });
@@ -22,7 +20,3 @@ const test = () => {
         core.setFailed(`Action failed with error ${err}`);
     }
 }
-
-export default test;
-
-test();
