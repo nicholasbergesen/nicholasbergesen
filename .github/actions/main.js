@@ -1,7 +1,7 @@
-(async function run() {
-    const core = require('@actions/core');
-    const fetch = require('node-fetch');
+const core = require('@actions/core');
+const fetch = require('node-fetch');
 
+(async function run() {
     try {
         const city = core.getInput('city', { required: true });
         const key = core.getInput('API_KEY', { required: true });
