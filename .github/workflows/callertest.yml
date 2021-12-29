@@ -1,0 +1,8 @@
+name: Call Beets
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call-workflow:
+    uses: bbq-beets/nicholasbergesen/.github/workflows/callme.yml@main
