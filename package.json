@@ -19,7 +19,7 @@
   "homepage": "https://github.com/nicholasbergesen/nicholasbergesen#readme",
   "dependencies": {
     "@actions/core": "^1.6.0",
-    "node-fetch": "^3.1.0"
+    "node-fetch": "^3.1.1"
   },
   "engines": {
     "node": ">=16.0.0"
