@@ -1,5 +1,5 @@
 name: Temperature
-on: [push, workflow_dispatch]
+on: [workflow_dispatch]
 jobs:
   Get-Temp:
     runs-on: ubuntu-latest
