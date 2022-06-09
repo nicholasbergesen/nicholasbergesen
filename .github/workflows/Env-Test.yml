@@ -7,7 +7,7 @@ jobs:
     steps:
     - run: echo '${{ toJSON(github) }}'
   env_job_dynamic:
-    environment: ${{ github.GITHUB_REF_NAME }}
+    environment: ${{ github.ref_name }}
     runs-on: ubuntu-latest
     steps:
     - env:
@@ -18,7 +18,7 @@ jobs:
     - run: echo Test
   env_job_static:
     environment: main
-    if: github.GITHUB_REF_NAME == 'main'
+    if: github.ref_name == 'main'
     runs-on: ubuntu-latest
     steps:
     - env:
