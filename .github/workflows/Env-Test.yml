@@ -6,6 +6,7 @@ jobs:
     environment: ${{ github.GITHUB_REF_NAME }}
     runs-on: ubuntu-latest
     steps:
-    - name: Environment Message
-      run: echo ${{ secrets.ENV_SECRET }}
-    - run: echo ${{ env.ENV_SECRET }}
+    - env:
+        SUPER_SECRET: ${{ secrets.ENV_SECRET }}
+      name: Environment Message
+      run: echo ${{ env.SUPER_SECRET }}
