@@ -1,0 +1,13 @@
+name: Build Push Deploy
+on:
+  workflow_call:
+    inputs:
+      environment:
+        type: string
+        required: true
+jobs:
+  build_push_deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    steps:
+      - run: ${{ secrets.ENV_SECRET }}
