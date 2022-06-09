@@ -11,5 +11,5 @@ jobs:
     name: my job
     runs-on: ubuntu-latest
     steps:
-      - run: ${{ toJSON(github) }}
-      - run: ${{ toJSON(job) }}
+      - run: echo ${{ toJSON(github) }}
+      - run: echo ${{ toJSON(job) }}
