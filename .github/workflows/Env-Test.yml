@@ -1,0 +1,10 @@
+name: Environment
+on:
+  workflow_dispatch:
+jobs:
+  env_job:
+    environment: ${{ github.GITHUB_REF_NAME }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Environment Message
+      run: echo ${{ secrets.ENV_SECRET }}
