@@ -3,13 +3,13 @@ on:
   workflow_dispatch:
 jobs:
   staging_sandbox:
-    if: ${{ github.ref_name == 'staging' || github.ref_name == 'sandbox }}
+    if: ${{ github.ref_name == 'staging' || github.ref_name == 'sandbox' }}
     uses: ./.github/workflows/build_push_deploy.yml
     with:
       environment:  ${{ github.ref_name }}
     secrets: inherit
   production:
-    if: ${{ github.ref_name != 'staging' && github.ref_name != 'sandbox }}
+    if: ${{ github.ref_name != 'staging' && github.ref_name != 'sandbox' }}
     uses: ./.github/workflows/build_push_deploy.yml
     with:
       environment: production
