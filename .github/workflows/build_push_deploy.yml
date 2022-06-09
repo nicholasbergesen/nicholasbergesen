@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     environment: ${{ inputs.environment }}
     steps:
-      - run: ${{ secrets.ENV_SECRET }}
+      - run: echo ${{ secrets.ENV_SECRET }}
