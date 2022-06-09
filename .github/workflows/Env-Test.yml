@@ -2,29 +2,8 @@ name: Environment
 on:
   workflow_dispatch:
 jobs:
-  github_context:
-    runs-on: ubuntu-latest
-    steps:
-    - run: echo '${{ toJSON(github) }}'
   env_job_dynamic:
     environment: ${{ github.ref_name }}
     runs-on: ubuntu-latest
     steps:
-    - env:
-        SUPER_SECRET: ${{ secrets.ENV_SECRET }}
-      name: Environment Message
-      run: echo ${{ env.SUPER_SECRET }}
-    - run: echo test
-    - run: echo Test
-  env_job_static:
-    environment: main
-    if: github.ref_name == 'main'
-    runs-on: ubuntu-latest
-    steps:
-    - env:
-        SUPER_SECRET: ${{ secrets.ENV_SECRET }}
-      name: Environment Message
-      run: echo ${{ env.SUPER_SECRET }}
-    - run: echo ${{ secrets.ENV_SECRET }}
-    - run: echo test
-    - run: echo Test
+      - run: echo ${{ secrets.SUPER_SECRET }}
