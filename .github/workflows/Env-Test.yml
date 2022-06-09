@@ -7,3 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo ${{ secrets.ENV_SECRET }}
+  hub:
+    name: my job
+    runs-on: ubuntu-latest
+    steps:
+      - run: ${{ fromJson(github) }}
+      - run: ${{ fromJson(job) }}
