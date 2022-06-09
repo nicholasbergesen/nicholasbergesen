@@ -1,6 +1,6 @@
 name: Environment Test
 on:
-  push:
+  workflow_dispatch:
 jobs:
   staging_sandbox:
     if: ${{ github.ref_name == 'staging' || github.ref_name == 'sandbox }}
