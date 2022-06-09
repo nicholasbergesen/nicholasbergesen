@@ -8,5 +8,4 @@ jobs:
     steps:
     - name: Environment Message
       run: echo ${{ secrets.ENV_SECRET }}
-    - run: echo ${{ environment.ENV_SECRET }}
     - run: echo ${{ env.ENV_SECRET }}
