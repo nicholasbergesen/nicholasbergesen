@@ -5,8 +5,7 @@ jobs:
   github_context:
     runs-on: ubuntu-latest
     steps:
-    - run: echo ${{ github.GITHUB_REF_NAME }}
-    - run: echo ${{ github.GITHUB_REF }}
+    - run: echo '${{ toJSON(github) }}'
   env_job_dynamic:
     environment: ${{ github.GITHUB_REF_NAME }}
     runs-on: ubuntu-latest
