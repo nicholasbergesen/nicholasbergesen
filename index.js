@@ -3,9 +3,9 @@ function start(flipper) {
     if (flipper) {
         block.style.backgroundColor = 'red'
     } else {
-        block.style.backgroundColor = 'green'
+        block.style.backgroundColor = 'yellow'
     }
-
+    console.log("updated")
     setTimeout(() => { start(!flipper) }, 100)
 }
 
