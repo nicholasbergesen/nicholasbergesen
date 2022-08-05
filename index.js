@@ -7,7 +7,7 @@ function start(flipper) {
         block.style.backgroundColor = 'yellow'
     }
     console.log(ticker)
-    setTimeout(start, ticker.nodeValue, !flipper)
+    setTimeout(start, ticker.value, !flipper)
 }
 
 function init() {
