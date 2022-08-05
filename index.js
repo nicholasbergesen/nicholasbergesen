@@ -3,6 +3,6 @@ function start(color) {
 }
 
 function init(e) {
-    const color = (e.screenX * e.screenY, 16)
+    const color = (e.screenX * e.screenY).toString(16)
     start(color)
 }
