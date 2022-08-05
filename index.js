@@ -6,10 +6,11 @@ function start(flipper) {
     } else {
         block.style.backgroundColor = 'yellow'
     }
-    console.log(ticker)
     setTimeout(start, ticker.value, !flipper)
 }
 
-function init() {
-    start(true)
+function init(e, v) {
+    console.log(e)
+    console.log(v)
+    //start(true)
 }
