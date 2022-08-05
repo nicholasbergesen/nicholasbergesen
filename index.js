@@ -1,16 +1,8 @@
-function start(flipper) {
-    const ticker = document.getElementById('ticker')
-    const block = document.getElementById('block')
-    if (flipper) {
-        block.style.backgroundColor = 'red'
-    } else {
-        block.style.backgroundColor = 'yellow'
-    }
-    setTimeout(start, ticker.value, !flipper)
+function start(color) {
+    document.getElementById('block').style.backgroundColor = `#${color}`
 }
 
-function init(e, v) {
-    console.log(e)
-    console.log(v)
-    //start(true)
+function init(e) {
+    const color = (e.screenX * e.screenY, 16)
+    start(color)
 }
