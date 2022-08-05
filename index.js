@@ -1,5 +1,5 @@
 function start(flipper) {
-    const block = document.getElementById("#block")
+    const block = document.getElementById('block')
     if (flipper) {
         block.style.backgroundColor = 'red'
     } else {
