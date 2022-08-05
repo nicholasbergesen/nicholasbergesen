@@ -9,4 +9,6 @@ function start(flipper) {
     setTimeout(() => { start(!flipper) }, 100)
 }
 
-start(true)
+function init() {
+    start(true)
+}
