@@ -6,9 +6,7 @@ function start(flipper) {
         block.style.backgroundColor = 'yellow'
     }
     console.log("updated")
-    setTimeout(function() {
-        start(!flipper);
-    }, 200)
+    setTimeout(start, 1000, !flipper)
 }
 
 function init() {
