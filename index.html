@@ -19,6 +19,7 @@
 
         .container {
             text-align: center;
+            padding: 10px;
         }
 
         .subtext {
@@ -33,6 +34,21 @@
             white-space: nowrap; /* Prevent wrapping */
             text-align: center;
             letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 768px) {
+            .timer {
+                font-size: 50px; /* Adjust for tablet-sized screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .subtext {
+                font-size: 14px; /* Smaller subtext on phone screens */
+            }
+            .timer {
+                font-size: 40px; /* Adjust font size for phones */
+            }
         }
     </style>
 </head>
