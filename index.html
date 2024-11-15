@@ -52,4 +52,21 @@
 
             if (diff <= 0) {
                 document.getElementById("timer").textContent = "Happy New Year!";
-                clearInter
+                clearInterval(timerInterval);
+                return;
+            }
+
+            const milliseconds = Math.floor((diff % 1000)).toString().padStart(3, '0');
+            const seconds = Math.floor((diff / 1000) % 60).toString().padStart(2, '0');
+            const minutes = Math.floor((diff / 1000 / 60) % 60).toString().padStart(2, '0');
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24).toString().padStart(2, '0');
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+            document.getElementById("timer").textContent = 
+                `${days}d ${hours}h ${minutes}m ${seconds}s ${milliseconds}ms`;
+        }
+
+        const timerInterval = setInterval(updateTimer, 10);
+    </script>
+</body>
+</html>
