@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luoyi</title>
+    <title>Countdown Timer</title>
     <style>
         body {
             background-color: #121212;
@@ -30,6 +30,7 @@
         .timer {
             font-size: 80px;
             font-weight: bold;
+            font-family: 'Courier New', Courier, monospace; /* Monospace font */
         }
     </style>
 </head>
@@ -51,10 +52,10 @@
                 return;
             }
 
-            const milliseconds = Math.floor((diff % 1000));
-            const seconds = Math.floor((diff / 1000) % 60);
-            const minutes = Math.floor((diff / 1000 / 60) % 60);
-            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const milliseconds = Math.floor((diff % 1000)).toString().padStart(3, '0');
+            const seconds = Math.floor((diff / 1000) % 60).toString().padStart(2, '0');
+            const minutes = Math.floor((diff / 1000 / 60) % 60).toString().padStart(2, '0');
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24).toString().padStart(2, '0');
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
 
             document.getElementById("timer").textContent = 
